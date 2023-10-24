@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HTMX is awesome</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>HTMX is awesome</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="mx-auto mt-10 bg-red">
-    <button
-            hx-target="#counter"
-            hx-post="#/decrease"
-            class="bg-purple-500 rounded-lg p-2 text-sm"
-    >
-        This is a button
-    </button>
+<div class="mx-auto mt-10 bg-red-500 ">
+  <button
+          hx-target="#counter"
+          hx-post="#/decrease"
+          class="bg-purple-500 rounded-lg p-2 text-sm"
+  >
+    This is a button
+  </button>
 </div>
-
 </body>
 </html>
