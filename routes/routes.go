@@ -1,8 +1,11 @@
 package routes
 
-import "github.com/gorilla/mux"
+import (
+	"GoHtmxPulse/controllers"
+	"github.com/gorilla/mux"
+)
 
 func registerRoutes(r *mux.Router) {
-	r.Handle("/increment", controllers.HandleIncremet()).Methods("GET")
-	r.Handle("/decrement", controllers.HandleIncremet()).Methods("GET")
+	r.HandleFunc("/increment", controllers.HandleIncrement).Methods("GET")
+	r.HandleFunc("/decrement", controllers.HandleDecrement).Methods("GET")
 }
