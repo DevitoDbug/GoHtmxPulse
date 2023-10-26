@@ -10,10 +10,11 @@ func RegisterRoutes(r *mux.Router, counter *int) {
 	r.HandleFunc("/counter/increment",
 		func(w http.ResponseWriter, r *http.Request) {
 			controllers.HandleIncrement(w, r, counter)
-		}).Methods("GET")
+		}).Methods("POST")
 
 	r.HandleFunc("/counter/decrement",
 		func(w http.ResponseWriter, r *http.Request) {
 			controllers.HandleDecrement(w, r, counter)
-		}).Methods("GET")
+		}).Methods("POST")
+
 }

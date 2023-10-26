@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>HTMX is awesome</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
@@ -16,17 +17,17 @@
       <div class="mx-auto mt-1 flex flex-row gap-3">
         <button
           hx-target="#counter"
-          hx-post="/counter/decrement"
-          class="bg-purple-500 rounded-lg p-2  text-lg"
+        hx-post="/counter/decrement"
+          class="bg-purple-500 rounded-lg p-2 w-24 text-lg md:w-14"
         >
-          Decrement -
+          -
         </button>
         <button
           hx-target="#counter"
           hx-post="/counter/increment"
-          class="bg-purple-500 rounded-lg p-2  text-lg"
+          class="bg-purple-500 rounded-lg p-2 w-24 text-lg md:w-14"
         >
-          Increment +
+          +
         </button>
       </div>
     </div>

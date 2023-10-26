@@ -13,7 +13,8 @@ func main() {
 	r := mux.NewRouter()
 	routes.RegisterRoutes(r, &counter)
 
-	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	r.Handle("/", r)
+	r.PathPrefix("/counter/").Handler(http.StripPrefix("/counter/", http.FileServer(http.Dir("static"))))
 
 	fmt.Println("Starting server at port ", port)
 	if err := http.ListenAndServe(port, r); err != nil {
